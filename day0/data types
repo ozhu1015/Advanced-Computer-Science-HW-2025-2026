@@ -1,0 +1,4 @@
+variables have specified data types - int, float, char, bool, string
+there are two types of data types 
+primitive: byte, short, int, long, float, double, boolean and char
+non-primitive: String, Arrays and Classes 
