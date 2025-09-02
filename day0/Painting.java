@@ -38,4 +38,17 @@ public class Painting {
         background = "Black";
         System.out.println("The painting has a black background now.");
     }
+
+    public void takeDownPaintings(int numberToTakeDown) {
+        if (numberToTakeDown > numPaintings){
+            System.out.println("There aren't that many paintings!");
+            numPaintings = 0;
+        } else {
+            numPaintings -= numberToTakeDown;
+            if (numPaintings == 0) {
+                System.out.println("There are no paintings left!");
+            }
+
+        }
+    }
 }

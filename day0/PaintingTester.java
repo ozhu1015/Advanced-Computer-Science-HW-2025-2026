@@ -8,5 +8,6 @@ public class PaintingTester {
         period1Painting.repaint();
         period1Painting.fall();
         period1Painting.shatter();
+        period1Painting.takeDownPaintings((4));
     }
 }
