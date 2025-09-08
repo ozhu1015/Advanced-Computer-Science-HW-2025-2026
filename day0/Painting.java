@@ -51,4 +51,27 @@ public class Painting {
 
         }
     }
+
+    public String toString() {
+        return "Number of paintings: " + numPaintings + 
+        ", Width: " + width + 
+        ", Frame: " + frame + 
+        ", Background: " + background + 
+        ", Is Landscape: " + isLandscape + 
+        ", Order Painting: " + orderPainting + 
+        ", On Wall: " + onWall;
+    }
+
+    public boolean equals(Painting otherPainting) {
+        if (this.numPaintings == otherPainting.numPaintings &&
+               this.width == otherPainting.width &&
+               this.frame.equals(otherPainting.frame) &&
+               this.background.equals(otherPainting.background) &&
+               this.isLandscape == otherPainting.isLandscape &&
+               this.orderPainting == otherPainting.orderPainting &&
+               this.onWall == otherPainting.onWall) {
+                return true;
+               };
+        return false;
+    }
 }

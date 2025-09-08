@@ -3,22 +3,21 @@ public class RectangleTester {
     public static void main(String[] args) {
         //Declaration: type name
         //Instantiation/initialization = new type();
-        Rectangle shriya = new Rectangle(19, 17); 
-        Rectangle samuel = new Rectangle(201);
-        Rectangle olivia = new Rectangle(7, 6);
+        Rectangle period1Rectangle1 = new Rectangle(13, 17); 
+        Rectangle period1Rectangle2 = new Rectangle(201);
 
-    System.out.println("Width is " + shriya.getWidth());
-    
-    samuel.setLength(12);
+        System.out.println(period1Rectangle1.toString());
+        System.out.println(period1Rectangle2.toString());
 
-    System.out.println("The new length is " + samuel.getLength());
+        period1Rectangle1.setLength(7);
+        period1Rectangle2.setWidth(9);
 
-    System.out.println("Length is " + olivia.getLength());
+        System.out.println(period1Rectangle1.toString());
+        System.out.println(period1Rectangle2.toString());
 
-    System.out.println("Area is " + samuel.calculateArea());
+        System.out.println(period1Rectangle1.equals(period1Rectangle2));
 
-    System.out.println("Perimeter is " + shriya.calculatePerimeter());
-
-    System.out.println("Diagonal is " + olivia.calculateDiagonal());
+        System.out.println(period1Rectangle1.calculateDiagonal());
+        System.out.println(period1Rectangle2.calculateDiagonal());
     }
 }

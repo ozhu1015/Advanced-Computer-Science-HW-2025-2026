@@ -39,6 +39,17 @@ public class Rectangle {
         width = newWidth;
     }
 
+    public String toString() {
+        return "This rectangle has a length of " + length + " and a width of " + width + ". Its area is " + calculateArea() + ".";
+    }
+
+    public boolean equals(Rectangle otherRectangle) {
+        if (this.length == otherRectangle.length && this.width == otherRectangle.width) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     //methods
     public int calculateArea(){
          int area = length * width;
