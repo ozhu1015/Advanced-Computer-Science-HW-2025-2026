@@ -15,9 +15,13 @@ public class RectangleTester {
         System.out.println(period1Rectangle1.toString());
         System.out.println(period1Rectangle2.toString());
 
-        System.out.println(period1Rectangle1.equals(period1Rectangle2));
+        if (period1Rectangle1.equals(period1Rectangle2)) {
+            System.out.println("The rectangles are the same.");
+        } else {
+            System.out.println("The rectangles are different.");
+        }
 
-        System.out.println(period1Rectangle1.calculateDiagonal());
-        System.out.println(period1Rectangle2.calculateDiagonal());
+        System.out.println("The diagonal of rectangle 1 is" + getDiagonal(period1Rectangle1));
+        System.out.println("The diagonal of rectangle 2 is" + getDiagonal(period1Rectangle2));
     }
 }

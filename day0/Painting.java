@@ -74,4 +74,20 @@ public class Painting {
                };
         return false;
     }
+
+    public void setNumPaintings(int paintings) {
+        numPaintings = paintings;
+    }
+
+    public boolean getIsLandscape() {
+        return isLandscape;
+    }
+
+    public void setWidth(double newWidth) {
+        width = newWidth;
+    }
+
+    public String getBackground() {
+        return background;
+    }
 }

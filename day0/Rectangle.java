@@ -16,7 +16,7 @@ public class Rectangle {
         width = desiredWidth;
     }
 
-    public Rectangle(int squareSideLength){
+    public Rectangle(int squareSideLength) {
         length = squareSideLength;
         width = squareSideLength;
     }
@@ -40,7 +40,18 @@ public class Rectangle {
     }
 
     public String toString() {
-        return "This rectangle has a length of " + length + " and a width of " + width + ". Its area is " + calculateArea() + ".";
+        return "This rectangle has a length of "
+            + length
+            + " and a width of " 
+            + width 
+            + ". Its area is "
+            + getArea() 
+            + "."
+            + "Its perimeter is " 
+            + getPerimeter()
+            + " and its diagonal is "
+            + getDiagonal() 
+            + ".";
     }
 
     public boolean equals(Rectangle otherRectangle) {
@@ -51,18 +62,19 @@ public class Rectangle {
         }
     }
     //methods
-    public int calculateArea(){
-         int area = length * width;
-         return area;
+
+    public int getArea() {
+        int area = length * width;
+        return area;
     }
 
-    public int calculatePerimeter(){
+    public int getPerimeter() {
         int perimeter = 2 * (length + width);
         return perimeter;
     }
 
-    public double calculateDiagonal() {
-        double diagonal = Math.sqrt((length * length) + (width + width));
+    public double getDiagonal() {
+        double diagonal = Math.sqrt((length * length) + (width * width));
         return diagonal;
     }
 }
