@@ -21,7 +21,7 @@ public class RectangleTester {
             System.out.println("The rectangles are different.");
         }
 
-        System.out.println("The diagonal of rectangle 1 is" + getDiagonal(period1Rectangle1));
-        System.out.println("The diagonal of rectangle 2 is" + getDiagonal(period1Rectangle2));
+        System.out.println("The diagonal of rectangle 1 is" + period1Rectangle1.getDiagonal());
+        System.out.println("The diagonal of rectangle 2 is" + period1Rectangle2.getDiagonal());
     }
 }
