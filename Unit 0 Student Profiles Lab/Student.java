@@ -39,12 +39,14 @@ public class Student {
         this.name = name;
     }
 
-    private String toString() {
+    public String toString() {
         return name + " is a " + grade + "th grade student. Their id is " + id + ".";
     }
 
-    private boolean equals(Student otherStudent) {
-        if (this.name == otherStudent.name && this.id == otherStudent.id && this.grade == otherStudent.grade) {
+    public boolean equals(Student otherStudent) {
+        if (this.name.equals(otherStudent.name) 
+            && this.id.equals(otherStudent.id) 
+            && this.grade == otherStudent.grade) {
             return true;
         } else {
             return false;
@@ -52,9 +54,11 @@ public class Student {
     }
 
     
-    private String generateId() {
+    public String generateId() {
         double d = Math.random();
-        d = d * 10;
-        int i = (int)d;
-        return String.valueOf(i);
+        d = d * 778 + 111;
+        double e = Math.random();
+        e = e * 10000;
+        return (int) d + "-" + (int) e;
     }
+}
