@@ -55,10 +55,14 @@ public class Student {
 
     
     public String generateId() {
-        double d = Math.random();
-        d = d * 778 + 111;
+        double d1 = Math.random();
+        d1 = d1 * 8 + 1;
+        double d2 = Math.random();
+        d2 = d2 * 8 + 1;
+        double d3 = Math.random();
+        d3 = d3 * 8 + 1;
         double e = Math.random();
         e = e * 10000;
-        return (int) d + "-" + (int) e;
+        return "" + (int) d1 + (int) d2 + (int) d3 + "-" + String.format("%04d", (int) e);
     }
 }
