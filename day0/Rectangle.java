@@ -1,6 +1,11 @@
 public class Rectangle {
     private int length;
     private int width;
+    private Point Point1;
+    private Point Point2;
+    private Point Point3;
+    private Point Point4;
+    private double degrees;
 
     //constructors
     //general default constructor
@@ -9,16 +14,31 @@ public class Rectangle {
         //initialize the private instance variables
         length = 5;
         width = 8;
+
+        Point1 = new Point(0, 0);
+        Point2 = new Point(0, width);
+        Point3 = new Point(length, 0);
+        Point4 = new Point(length, width);
     }
 
     public Rectangle(int desiredLength, int desiredWidth) {
         length = desiredLength;
         width = desiredWidth;
+
+        Point1 = new Point(0, 0);
+        Point2 = new Point(0, width);
+        Point3 = new Point(length, 0);
+        Point4 = new Point(length, width);
     }
 
     public Rectangle(int squareSideLength) {
         length = squareSideLength;
         width = squareSideLength;
+
+        Point1 = new Point(0, 0);
+        Point2 = new Point(0, width);
+        Point3 = new Point(length, 0);
+        Point4 = new Point(length, width);
     }
 
     //getters let you get the private instance variables from the class

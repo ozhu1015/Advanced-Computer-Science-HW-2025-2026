@@ -9,6 +9,18 @@ public class Line {
         this.c = c;
     }
 
+    public Line() {
+        a = generateRandomParameters();
+        b = generateRandomParameters();
+        c = generateRandomParameters();
+    }
+
+    public int generateRandomParameters() {
+        double num;
+        num = (Math.random() - Math.random());
+        return (int) num * 100 + 1;
+    }
+
     public void setA(int a) {
         this.a = a;
     }
@@ -51,6 +63,14 @@ public class Line {
 
     public boolean equals(Line otherline) {
         if (this.a == otherline.a && this.b == otherline.b && this.c == otherline.c) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isParallel(Line otherline) {
+        if (this.calculateSlope() == otherline.calculateSlope()) {
             return true;
         } else {
             return false;
