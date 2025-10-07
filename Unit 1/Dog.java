@@ -13,7 +13,7 @@ public class Dog {
         this.ownerName = ownerName;
         this.age = age;
         this.dogId = dogId;
-        this.dogChar = generateDogChar();
+        this.dogChar = Dog.generateDogChar(dogId);
         this.stillInFacility = true;
         this.dogTag = generateDogTag();
     }
@@ -23,7 +23,7 @@ public class Dog {
         this.ownerName = "Shriya's Mom";
         this.age = 7;
         this.dogId = 123;
-        this.dogChar = generateDogChar();
+        this.dogChar = Dog.generateDogChar(dogId);
         this.stillInFacility = true;
         this.dogTag = generateDogTag();
     }
@@ -58,6 +58,8 @@ public class Dog {
 
     public void setDogId(int dogId) {
         this.dogId = dogId;
+        this.dogChar = Dog.generateDogChar(dogId);
+        this.dogTag = generateDogTag();
     }
 
     public char getDogChar() {
@@ -106,7 +108,7 @@ public class Dog {
             this.stillInFacility == otherDog.stillInFacility;
     }
 
-    public char generateDogChar() {
+    public static char generateDogChar(int dogId) {
         int digit1 = dogId / 100;
         int digit2 = (dogId / 10) % 10;
         int digit3 = dogId % 10;
@@ -116,5 +118,19 @@ public class Dog {
 
     public String generateDogTag() {
         return dogId + "" + dogChar;
+    }
+
+    public static String pickup(Dog dog, String personName) {
+        if (dog.ownerName.equals(personName)) {
+            dog.stillInFacility = false;
+            return dog.name + " has been picked up by their owner " + personName + ".";
+        } else {
+            return dog.name + " cannot be picked up by " + personName + " as they are not the owner.";
+        }
+    }
+
+    public static void checkIn(Dog dog, String personName) {
+        dog.stillInFacility = true;
+        dog.ownerName = personName;
     }
 }
