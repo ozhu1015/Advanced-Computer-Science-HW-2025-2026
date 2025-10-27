@@ -56,6 +56,14 @@ public class Cat {
         this.catId = PurrfectUtils.validateCatId(catId);
     }
 
+    public char getCatChar() {
+        return catChar;
+    }
+
+    public void setCatChar(char catChar) {
+        this.catChar = catChar;
+    }
+
     public boolean isHungry() {
         return isHungry;
     }

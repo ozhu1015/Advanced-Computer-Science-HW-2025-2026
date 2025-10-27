@@ -14,8 +14,8 @@ public class PurrfectUtils {
 
     public static char generateCatChar(String catId) {
         int sum = 0;
-        for (int i = 0; i < 4; i++) {
-            sum += catId.charAt(i);
+        for (int i = 0; i < catId.length(); i++) {
+            sum += catId.charAt(i) - '0';
         }
         return (char) (sum % 26 + 'A');
     }
