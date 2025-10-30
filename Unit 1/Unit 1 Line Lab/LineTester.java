@@ -1,20 +1,23 @@
 public class LineTester {
 
     public static void main(String[] args) {
-        Line line1 = new Line(5, 4, -17);
-        double slope1 = line1.calculateSlope(); // slope1 should be -1.25
-        System.out.println("The slope of line1 is: " + slope1);
-        // Should be true, as 5(5) + 4(-2) + (-17) = 0
-        boolean onLine1 = line1.isCoordinateOnLine(5, -2); 
-        System.out.println("Is the coordinate (5,-2) on line1? " + onLine1);
+        Point p1 = new Point(2, 7);
+        Point p2 = new Point(1, 4);
+        Point p3 = new Point(11, 18);
+        Point p4 = new Point(4, 13);
 
-        // Testing Line 2
-        Line line2 = new Line(-25, 40, 30);
-        double slope2 = line2.calculateSlope(); // slope2 should be 0.625
-        System.out.println("The slope of line2 is: " + slope2);
+        Line pointLine = new Line(p1, p2);
+        System.out.println("Slope is: " + pointLine.calculateSlope());
+        System.out.println("Slope is: " + pointLine.calculateSlopeFromPoints());
+        if (pointLine.calculateSlope() == pointLine.calculateSlopeFromPoints()) {
+            System.out.println("The slopes are equal");
+        } else {
+            System.out.println("The slopes are not equal");
+        }
 
-        // Should be false as -25(5) + 40(-2) + 30 != 0
-        boolean onLine2 = line2.isCoordinateOnLine(5, -2);
-        System.out.println("Is the coordinate (5,-2) on line2? " + onLine2);
+        System.out.println("Is point p1 on line? " + pointLine.isCoordinateOnLine(p1));
+        System.out.println("Is point p2 on line? " + pointLine.isCoordinateOnLine(p2));
+        System.out.println("Is point p3 on line? " + pointLine.isCoordinateOnLine(p3));
+        System.out.println("Is point p4 on line? " + pointLine.isCoordinateOnLine(p4));
     }
 }
