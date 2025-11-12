@@ -1,0 +1,1 @@
+        ArrayOps.printIntegerArray(resizedArr3);
