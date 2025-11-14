@@ -9,6 +9,9 @@ public class ArrayOps {
      * @return The constructed string representation of the array.
      */
     public static String printStringArray(String[] array) {
+        if (array.length == 0) {
+            return "[]";
+        }
         String answer = "[" + array[0];
         for (int i = 1; i < array.length; i++) {
             answer += ", " + array[i];
@@ -113,6 +116,9 @@ public class ArrayOps {
      */
     public static int[] countLetterFrequencies(String input) {
         int[] array = new int[26];
+        if (input == null) {
+            return new int[0];
+        }
         input = input.toLowerCase();
         for (int i = 0; i < input.length(); i++) {
             if (input != null) {
@@ -194,10 +200,10 @@ public class ArrayOps {
      * @return The reversed array
      */
     public static int[] reverseIntArray(int[] array) {
-        int[] reversedArray = new int[array.length];
         if (array == null) {
             return new int[0];
         }
+        int[] reversedArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             reversedArray[array.length - i - 1] = array[i];
         }
